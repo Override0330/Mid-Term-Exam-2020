@@ -7,7 +7,7 @@
 ## 考核内容
 
 * 完成一款完整的音乐App。
-* 视觉图&产品、接口文档见下方。
+* 视觉图、产品、接口文档见下方。
 
 
 
@@ -49,7 +49,6 @@
 * 播放页的音乐播放及控制
   * 播放方式：随机播放、顺序播放
   * 播放控制：暂停、播放、上一首、下一首、进度拖拽
-  * 后台播放
 * 首页
   * banner
   * 歌单推荐：封面、标题、作者
@@ -67,7 +66,7 @@
 
 * 动画
 * 播放页的歌词显示、动画
-* 搜索功能的实现（无视觉图，需要自己设计
+* 搜索功能的实现（无视觉图，需要自己yy
 
 * 如果想加其他需求，私聊导师
 
@@ -153,6 +152,282 @@ BaseUrl: http://47.99.165.194
           ...
         }
     ]
+}
+```
+
+#### 获取专辑详情
+
+* 请求url：/album
+
+* 请求方式：GET
+
+* 请求参数
+
+  | 参数 | 参数说明                           |
+  | ---- | ---------------------------------- |
+  | id   | 必选，专辑id，注意是专辑，不是歌单 |
+
+* JSON
+
+```json
+{
+    "songs": [
+        {
+            "rtUrls": [],
+            "ar": [
+              //作者信息
+                {
+                    "id": 1030001,
+                    "name": "周深"
+                }
+            ],
+            "al": {
+              //专辑简要信息，专辑详细信息见尾部
+                "id": 88627345,
+                "name": "暗示",
+                "picUrl": "https://p2.music.126.net/1UWVS742R3IBkoY1UsQZhw==/109951164943562862.jpg",//专辑封面
+                "pic_str": "109951164943562862",
+                "pic": 109951164943562860
+            },
+            "st": 1,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 6796845,
+                "vd": -32411
+            },
+            "cd": "01",
+            "djId": 0,
+            "no": 1,
+            "fee": 8,
+            "v": 3,
+            "cf": "",
+            "dt": 283138,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 11328045,
+                "vd": -35011
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 4531245,
+                "vd": -30681
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "mv": 0,
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 100,
+            "rt": "",
+            "mst": 9,
+            "cp": 1416778,
+            "crbt": null,
+            "name": "暗示",
+            "id": 1443928242,
+            "privilege": {
+                "id": 1443928242,
+                "fee": 8,
+                "payed": 0,
+                "st": 0,
+                "pl": 128000,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 128000,
+                "toast": false,
+                "flag": 68,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000
+            }
+        },
+        {
+            "rtUrls": [],
+            "ar": [
+                {
+                    "id": 1030001,
+                    "name": "周深"
+                }
+            ],
+            "al": {
+                "id": 88627345,
+                "name": "暗示",
+                "picUrl": "https://p1.music.126.net/1UWVS742R3IBkoY1UsQZhw==/109951164943562862.jpg",
+                "pic_str": "109951164943562862",
+                "pic": 109951164943562860
+            },
+            "st": 1,
+            "noCopyrightRcmd": null,
+            "a": null,
+            "m": {
+                "br": 192000,
+                "fid": 0,
+                "size": 6796845,
+                "vd": -3190
+            },
+            "cd": "01",
+            "djId": 0,
+            "no": 2,
+            "fee": 8,
+            "v": 3,
+            "cf": "",
+            "dt": 283138,
+            "h": {
+                "br": 320000,
+                "fid": 0,
+                "size": 11328045,
+                "vd": -5801
+            },
+            "l": {
+                "br": 128000,
+                "fid": 0,
+                "size": 4531245,
+                "vd": -1450
+            },
+            "rtUrl": null,
+            "ftype": 0,
+            "mv": 0,
+            "rtype": 0,
+            "rurl": null,
+            "pst": 0,
+            "t": 0,
+            "alia": [],
+            "pop": 95,
+            "rt": "",
+            "mst": 9,
+            "cp": 1416778,
+            "crbt": null,
+            "name": "暗示 (伴奏)",
+            "id": 1443928263,
+            "privilege": {
+                "id": 1443928263,
+                "fee": 8,
+                "payed": 0,
+                "st": 0,
+                "pl": 128000,
+                "dl": 0,
+                "sp": 7,
+                "cp": 1,
+                "subp": 1,
+                "cs": false,
+                "maxbr": 999000,
+                "fl": 128000,
+                "toast": false,
+                "flag": 68,
+                "preSell": false,
+                "playMaxbr": 999000,
+                "downloadMaxbr": 999000
+            }
+        }
+    ],
+    "code": 200,
+    "album": {
+      //专辑详细信息
+        "songs": [],
+        "paid": false,
+        "onSale": false,
+        "mark": 0,
+        "status": 0,
+        "pic": 109951164943562860,
+        "picUrl": "https://p2.music.126.net/1UWVS742R3IBkoY1UsQZhw==/109951164943562862.jpg",//专辑封面
+        "commentThreadId": "R_AL_3_88627345",
+        "copyrightId": 1416778,
+        "blurPicUrl": "https://p2.music.126.net/1UWVS742R3IBkoY1UsQZhw==/109951164943562862.jpg",
+        "companyId": 0,
+        "picId": 109951164943562860,
+        "artist": {
+          //专辑作者信息
+            "img1v1Id": 18686200114669624,
+            "topicPerson": 0,
+            "trans": "",
+            "picUrl": "https://p2.music.126.net/u7I488Oi44qH4mqQuqFnqA==/109951164854660837.jpg",
+            "img1v1Url": "https://p2.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",
+            "picId": 109951164854660830,
+            "followed": false,
+            "briefDesc": "",
+            "alias": [],
+            "musicSize": 263,
+            "albumSize": 64,
+            "name": "周深",
+            "id": 1030001,
+            "picId_str": "109951164854660837",
+            "img1v1Id_str": "18686200114669622"
+        },
+        "briefDesc": "",
+        "publishTime": 1588089600000,
+        "company": "网易云音乐",
+        "alias": [],
+        "artists": [
+            {
+                "img1v1Id": 18686200114669624,
+                "topicPerson": 0,
+                "trans": "",
+                "picUrl": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", //作者头像背景
+                "img1v1Url": "https://p2.music.126.net/VnZiScyynLG7atLIZ2YPkw==/18686200114669622.jpg",//作者头像
+                "picId": 0,
+                "followed": false,
+                "briefDesc": "",
+                "alias": [],
+                "musicSize": 0,
+                "albumSize": 0,
+                "name": "周深",
+                "id": 1030001,
+                "img1v1Id_str": "18686200114669622"
+            }
+        ],
+        "subType": "录音室版",
+        "description": "由歌手周深演唱的全新单曲《暗示》正式上线。\n“我有一点不知所措，有点紧张；你不经意的对我笑，我好茫然”开篇随着手风琴吹奏的浪漫音符走进少年心房，暗恋时的紧张，悸动时的心生欢喜，随着歌词和周深的声音慢慢走进这首歌的世界。\n“默默跟在你的背后，影子很长；你漫不经心的问候，让我遐想”，所有的暗恋都像是影子一样默默的存在于某一处，在光的背后只能任由自己遐想，即使一个简单朦胧的暗示，都能让自己心动。\n“可笑我，始终不承认自己想太多，明知是场梦却陶醉其中”歌词结尾的描写跟大多数暗恋的人一样，在心动的时候始终不愿意承认现实，沉醉在自己编织的梦中。\n简洁明了的词句完整的诠释了暗恋者心里状态的变化，从暗恋初期的紧张、激动到中间的执着、挣扎，再到最后的深陷其中。\n歌曲妙用手风琴、吉他与和声的配合，周深清亮的嗓音如同迷雾中的一丝光缓缓道出暗恋时的少年心事，青涩与温柔的交融，干净的声音与暗恋期间婉转的内心挣扎完美融合在清澈的歌声中，歌曲结尾处纯人声吟唱和手风琴融合的特别设计，为整首歌增加一个生动有趣的结尾，让人眼前一亮。\n\n",
+        "tags": "",
+        "name": "暗示",
+        "id": 88627345,
+        "type": "EP/Single",
+        "size": 2,	//专辑歌曲数量
+        "picId_str": "109951164943562862",
+        "info": {
+            "commentThread": {
+                "id": "R_AL_3_88627345",
+                "resourceInfo": {
+                    "id": 88627345,
+                    "userId": -1,
+                    "name": "暗示",
+                    "imgUrl": "http://p4.music.126.net/1UWVS742R3IBkoY1UsQZhw==/109951164943562862.jpg",
+                    "creator": null,
+                    "encodedId": null,
+                    "subTitle": null,
+                    "webUrl": null
+                },
+                "resourceType": 3,
+                "commentCount": 1048,
+                "likedCount": 0,
+                "shareCount": 342,
+                "hotCount": 23,
+                "latestLikedUsers": null,
+                "resourceTitle": "暗示",
+                "resourceOwnerId": -1,
+                "resourceId": 88627345
+            },
+            "latestLikedUsers": null,
+            "liked": false,
+            "comments": null,
+            "resourceType": 3,
+            "resourceId": 88627345,
+            "commentCount": 1048,
+            "likedCount": 0,
+            "shareCount": 342,
+            "threadId": "R_AL_3_88627345"
+        }
+    }
 }
 ```
 
